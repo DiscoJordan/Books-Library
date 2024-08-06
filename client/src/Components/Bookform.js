@@ -7,7 +7,7 @@ import createBookWithId from "../utils/createBookWithId";
 function Bookform() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
-  const [year, setYear] = useState(null);
+  const [year, setYear] = useState('');
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -40,7 +40,7 @@ function Bookform() {
           />{" "}
         </div>
         <div>
-          <label htmlFor="title">Author:</label>
+          <label htmlFor="author">Author:</label>
           <input
             type="text"
             id="author"
@@ -49,7 +49,7 @@ function Bookform() {
           />
         </div>
         <div>
-          <label htmlFor="title">Year:</label>
+          <label htmlFor="year">Year:</label>
           <input
             type="number"
             id="year"
