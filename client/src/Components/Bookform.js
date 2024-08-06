@@ -1,35 +1,30 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addBook } from "../Redux/books/actionCreators";
-import { v4 as uuidv4 } from 'uuid';
-import booksData from '../books.json'
+import booksData from "../books.json";
+import createBookWithId from "../utils/createBookWithId";
 
 function Bookform() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
+  const [year, setYear] = useState(null);
   const dispatch = useDispatch();
 
-  
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title && author) {
-      const book = { title: title, author: author,isFav:false, id:uuidv4() };
-
+      dispatch(addBook(createBookWithId({ author, title, year })));
       setTitle("");
       setAuthor("");
-
-      dispatch(addBook(book));
+      setYear("");
     }
   };
   const handleAddRandom = (e) => {
     e.preventDefault();
-    let randomId = Math.floor(Math.random()*booksData.length)
-    const randomBook = booksData[randomId]
-    const book = { ...randomBook,isFav:false, id:uuidv4() };
-    dispatch(addBook(book));
-   
+    let randomId = Math.floor(Math.random() * booksData.length);
+    const randomBook = booksData[randomId];
+    dispatch(addBook(createBookWithId(randomBook)));
   };
-
 
   return (
     <div className="app-block book-form">
@@ -53,8 +48,20 @@ function Bookform() {
             onChange={(e) => setAuthor(e.target.value)}
           />
         </div>
+        <div>
+          <label htmlFor="title">Year:</label>
+          <input
+            type="number"
+            id="year"
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
+          />
+        </div>
         <button type="submit"> Add Book</button>
-        <button type="button" onClick={handleAddRandom}> Add Random Book</button>
+        <button type="button" onClick={handleAddRandom}>
+          {" "}
+          Add Random Book
+        </button>
       </form>
     </div>
   );

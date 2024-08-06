@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { ToggleFavBook, deleteBook } from "../Redux/books/actionCreators";
-
 import { MdOutlineDeleteForever } from "react-icons/md";
 import { BsBookmarkHeart, BsBookmarkHeartFill } from "react-icons/bs";
 
@@ -25,7 +24,7 @@ function BookList() {
             <li key={book.id}>
               <div className="book-info">
                 {" "}
-                {++i}. {book.title} by <b>{book.author}</b>
+                {++i}. {book.title} by <b>{book.author}</b>,<i> {book.year}</i>
               </div>
               <div className="book-actions">
                 {
