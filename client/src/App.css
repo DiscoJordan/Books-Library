@@ -161,12 +161,25 @@ span{
 }
 
 .book-list .star-icon {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   margin: 0 20px;
   cursor: pointer;
   transition: color 0.3s ease;
   color: #fca510;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.book-list .delete-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .filter-row {
   display: flex;

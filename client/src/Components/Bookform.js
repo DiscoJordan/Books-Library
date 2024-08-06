@@ -13,7 +13,7 @@ function Bookform() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title && author) {
-      const book = { title: title, author: author, id:uuidv4() };
+      const book = { title: title, author: author,isFav:false, id:uuidv4() };
 
       setTitle("");
       setAuthor("");
@@ -25,7 +25,7 @@ function Bookform() {
     e.preventDefault();
     let randomId = Math.floor(Math.random()*booksData.length)
     const randomBook = booksData[randomId]
-    const book = { ...randomBook, id:uuidv4() };
+    const book = { ...randomBook,isFav:false, id:uuidv4() };
     dispatch(addBook(book));
    
   };
