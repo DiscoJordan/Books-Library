@@ -11,8 +11,6 @@ const booksReducer = (state = initialState, action) => {
       return state.filter((book) => book.id !== action.payload);
       
     case a.TOGGLE_FAVBOOK: 
-    console.log(state);
-    console.log(action.payload);
       return state.map((book) =>
         book.id === action.payload ? { ...book, isFav: !book.isFav } : book
       );
