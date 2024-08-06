@@ -5,7 +5,22 @@
   justify-content: center;
   text-align: center;
 }
+.circle{
+  background-color: #007bff;
+  padding: 5px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
+}
+.circle:hover{
+  background-color: #002f61;
+ 
+  
+}
+span{
+  color: white;
+}
 .app-header {
   background-color: #0a1a2d;
   color: #fff;
