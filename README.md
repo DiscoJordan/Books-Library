@@ -6,6 +6,8 @@ Books Library is a web application that allows users to manage their personal li
 
 - Add new books to your library
 - Remove books from your library
+- Mark books as favorite
+- Sort books
 - Search for books by title in your library
 - Search for books by author in your library
 
