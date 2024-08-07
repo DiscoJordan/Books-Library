@@ -3,7 +3,7 @@ import {
   resetFilters,
   setTitleFilter,
   setAuthorFilter,
-  ToggleFavFilter
+  toggleFavFilter
 } from "../Redux/slices/filterSlice";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -30,7 +30,7 @@ function Filter() {
   };
 
   const handleToggleFavFilter = () => {
-    dispatch(ToggleFavFilter());
+    dispatch(toggleFavFilter());
   };
   return (
     <div className="app-block filter">

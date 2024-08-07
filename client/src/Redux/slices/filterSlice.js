@@ -16,7 +16,7 @@ const filterSlice = createSlice({
     setAuthorFilter: (state, action) => {
       state.author = action.payload;
     },
-    ToggleFavFilter: (state) => {
+    toggleFavFilter: (state) => {
       state.onlyFavorite = !state.onlyFavorite;
     },
     resetFilters: (state) => {
@@ -29,7 +29,7 @@ export const {
   setTitleFilter,
   setAuthorFilter,
   resetFilters,
-  ToggleFavFilter,
+  toggleFavFilter,
 } = filterSlice.actions;
 export const selectTitleFilter = (state) => state.filter.title;
 export const selectAuthorFilter = (state) => state.filter.author;
