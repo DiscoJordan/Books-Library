@@ -61,7 +61,7 @@ function BookList() {
                 {" "}
                 {++i}. {highlightMatch(book.title, titleFilter)} by{" "}
                 <b>{highlightMatch(book.author, authorFilter)}</b>,
-                <i> {book.year}</i>
+                <i> {book.year}</i> ({book.source})
               </div>
               <div className="book-actions">
                 {
