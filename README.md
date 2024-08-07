@@ -36,7 +36,7 @@ To get started with the Books Library project, follow these steps:
    
     ```bash
    cd server
-   nidemon
+   nodemon
    ```
 2. Run React app in client folder:
    
