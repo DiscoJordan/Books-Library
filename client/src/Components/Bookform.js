@@ -4,7 +4,7 @@ import { addBook } from "../Redux/slices/booksSlice";
 import booksData from "../books.json";
 import createBookWithId from "../utils/createBookWithId";
 
-import { thunkFunction } from "../Redux/slices/booksSlice";
+import { fetchBook } from "../Redux/slices/booksSlice";
 
 function Bookform() {
   const [title, setTitle] = useState("");
@@ -31,7 +31,8 @@ function Bookform() {
 
 
   const handleAddRandomFromAPI =  () => {
-  dispatch(thunkFunction)
+  dispatch(fetchBook())
+
   };
 
   return (
