@@ -52,5 +52,5 @@ Server initially is following port `http://localhost:4040`
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 - [Node.js](https://nodejs.org/) - JavaScript runtime built on Chrome's V8 JavaScript engine
 - [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
-- [Redux](https://redux.js.org/)) - A JS library for predictable and maintainable global state management
+- [Redux](https://redux.js.org/) - A JS library for predictable and maintainable global state management
 
